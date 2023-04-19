@@ -1,0 +1,19 @@
+-- This function creates a local player cham in Lua 5.1
+-- It requires a game engine that supports rendering of player models
+
+function createLocalPlayerCham()
+  -- Get the local player object
+  local localPlayer = engine.getLocalPlayer()
+  
+  -- Create a new material for the cham
+  local chamMaterial = engine.createMaterial("ChamMaterial")
+  chamMaterial.setColor(255, 0, 0) -- Set the color to red
+  
+  -- Create a new mesh for the cham
+  local chamMesh = engine.createMesh("ChamMesh")
+  chamMesh.setMaterial(chamMaterial)
+  chamMesh.setRenderMode(engine.RenderMode.Wireframe) -- Set the render mode to wireframe
+  
+  -- Attach the mesh to the local player object
+  localPlayer.attachMesh(chamMesh)
+end
