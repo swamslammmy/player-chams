@@ -1,0 +1,20 @@
+Sure, here's some sample code that multiplies the velocity of an object by a given factor:
+
+lua
+Copy code
+-- function to multiply velocity
+function multiplyVelocity(obj, factor)
+  obj.velocity.x = obj.velocity.x * factor
+  obj.velocity.y = obj.velocity.y * factor
+end
+This code defines a function called multiplyVelocity that takes two arguments: an object with a velocity property (which should have x and y properties), and a factor by which to multiply the velocity. The function then multiplies the x and y components of the velocity by the factor.
+
+You can call this function like this:
+
+lua
+Copy code
+-- example usage
+local obj = { velocity = { x = 10, y = 5 } }
+multiplyVelocity(obj, 2)
+print(obj.velocity.x, obj.velocity.y) -- output: 20 10
+This code creates an example object with an initial velocity of { x = 10, y = 5 }, calls multiplyVelocity with a factor of 2, and then prints out the updated velocity components.
